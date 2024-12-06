@@ -2,5 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
-  modules: ["@nuxt/ui"]
+  modules: ["@prisma/nuxt"],
+  prisma: {
+    runMigration: false
+  },
+  build: {
+    transpile: ['@prisma/client']
+  }
 })
